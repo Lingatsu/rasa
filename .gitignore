@@ -1,0 +1,30 @@
+# Environnements virtuels
+venv/
+pyvenv.cfg
+lib/
+lib64/
+bin/
+include/
+share/
+
+# Modèles Rasa
+models/
+
+# Dossiers Rasa spécifiques
+.rasa/
+
+# Fichiers de configuration locaux
+credentials.yml
+endpoints.yml
+
+# Fichiers de logs et temporaires
+*.log
+*.tmp
+
+# Fichiers et dossiers générés par les tests
+tests/__pycache__/
+tests/.pytest_cache/
+
+# Fichiers de dépendances Python
+*.pyc
+__pycache__/

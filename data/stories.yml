@@ -1,0 +1,51 @@
+version: "3.1"
+
+stories:
+
+- story: happy path
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_great
+  - action: utter_happy
+
+- story: sad path 1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_happy
+
+- story: sad path 2
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: deny
+  - action: utter_goodbye
+
+# French stories
+- story: chemin heureux en français
+  steps:
+  - intent: saluer
+  - action: utter_saluer
+  - intent: humeur_bonne
+  - action: utter_heureux
+
+- story: chemin triste en français
+  steps:
+  - intent: saluer
+  - action: utter_saluer
+  - intent: humeur_mauvaise
+  - action: utter_remonter_le_moral
+  - action: utter_aide
+
+- story: demande de météo en français
+  steps:
+  - intent: demander_meteo
+  - action: utter_meteo_fr

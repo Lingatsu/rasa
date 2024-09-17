@@ -1,0 +1,64 @@
+version: "3.1"
+
+intents:
+  - greet
+  - goodbye
+  - affirm
+  - deny
+  - mood_great
+  - mood_unhappy
+  - bot_challenge
+  - ask_weather
+  - saluer
+  - au_revoir
+  - affirmer
+  - nier
+  - humeur_bonne
+  - humeur_mauvaise
+  - defi_bot
+  - demander_meteo
+
+responses:
+  utter_greet:
+    - text: "Hello! How can I assist you?"
+
+  utter_goodbye:
+    - text: "Goodbye!"
+
+  utter_iamabot:
+    - text: "I am a bot, powered by Rasa."
+
+  utter_happy:
+    - text: "Great, keep it up!"
+
+  utter_cheer_up:
+    - text: "Here is something to cheer you up!"
+      image: "https://i.imgur.com/nGF1K8f.jpg"
+
+  utter_did_that_help:
+    - text: "Did that help?"
+
+  utter_ask_weather:
+    - text: "The weather today is sunny with a temperature of 25°C."
+
+  # French responses
+  utter_saluer:
+    - text: "Salut ! Comment ça va ?"
+
+  utter_au_revoir:
+    - text: "Au revoir et à bientôt !"
+
+  utter_heureux:
+    - text: "Génial, continue comme ça !"
+
+  utter_remonter_le_moral:
+    - text: "Je suis sûr que ça ira mieux bientôt."
+
+  utter_aide:
+    - text: "Est-ce que cela vous a aidé ?"
+
+  utter_je_suis_un_bot:
+    - text: "Je suis un bot, propulsé par Rasa."
+
+  utter_meteo_fr:
+    - text: "La météo aujourd'hui est ensoleillée avec une température de 22°C."

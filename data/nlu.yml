@@ -1,0 +1,157 @@
+version: "3.1"
+
+nlu:
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - moin
+    - hey there
+    - let's go
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
+
+- intent: goodbye
+  examples: |
+    - cu
+    - good by
+    - cee you later
+    - good night
+    - bye
+    - goodbye
+    - have a nice day
+    - see you around
+    - bye bye
+    - see you later
+
+- intent: affirm
+  examples: |
+    - yes
+    - y
+    - indeed
+    - of course
+    - that sounds good
+    - correct
+
+- intent: deny
+  examples: |
+    - no
+    - n
+    - never
+    - I don't think so
+    - don't like that
+    - no way
+    - not really
+
+- intent: mood_great
+  examples: |
+    - perfect
+    - great
+    - amazing
+    - feeling like a king
+    - wonderful
+    - I am feeling very good
+    - I am great
+    - I am amazing
+    - I am going to save the world
+    - super stoked
+    - extremely good
+    - so so perfect
+    - so good
+    - so perfect
+
+- intent: mood_unhappy
+  examples: |
+    - my day was horrible
+    - I am sad
+    - I don't feel very well
+    - I am disappointed
+    - super sad
+    - I'm so sad
+    - sad
+    - very sad
+    - unhappy
+    - not good
+    - not very good
+    - extremly sad
+    - so saad
+    - so sad
+
+- intent: bot_challenge
+  examples: |
+    - are you a bot?
+    - are you a human?
+    - am I talking to a bot?
+    - am I talking to a human?
+
+- intent: saluer
+  examples: |
+    - salut
+    - bonjour
+    - coucou
+    - bonsoir
+    - hello
+    - salut ça va ?
+    - bon matin
+    - bonne après-midi
+
+- intent: au_revoir
+  examples: |
+    - au revoir
+    - à bientôt
+    - salut
+    - à la prochaine
+    - bye
+    - adieu
+
+- intent: affirmer
+  examples: |
+    - oui
+    - bien sûr
+    - exactement
+    - correct
+    - c'est ça
+    - tout à fait
+
+- intent: nier
+  examples: |
+    - non
+    - pas du tout
+    - jamais
+    - je ne pense pas
+    - pas vraiment
+
+- intent: humeur_bonne
+  examples: |
+    - je me sens bien
+    - je suis heureux
+    - c'est une super journée
+    - je vais très bien
+    - je suis content
+
+- intent: humeur_mauvaise
+  examples: |
+    - je suis triste
+    - je ne vais pas bien
+    - je suis déçu
+    - je suis en colère
+    - mauvaise journée
+
+- intent: defi_bot
+  examples: |
+    - es-tu un robot?
+    - suis-je en train de parler à un bot?
+    - es-tu humain?
+
+- intent: demander_meteo
+  examples: |
+    - Quelle est la météo ?
+    - Quel temps fait-il ?
+    - Peux-tu me donner la météo ?
+    - Comment est le temps aujourd'hui ?

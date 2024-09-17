@@ -1,0 +1,28 @@
+version: "3.1"
+
+rules:
+
+- rule: Say goodbye anytime the user says goodbye
+  steps:
+  - intent: goodbye
+  - action: utter_goodbye
+
+- rule: Say 'I am a bot' anytime the user challenges
+  steps:
+  - intent: bot_challenge
+  - action: utter_iamabot
+
+- rule: Dire au revoir en français lorsque l'utilisateur dit au revoir
+  steps:
+  - intent: au_revoir
+  - action: utter_au_revoir
+
+- rule: Dire 'Je suis un bot' lorsque l'utilisateur le demande en français
+  steps:
+  - intent: defi_bot
+  - action: utter_je_suis_un_bot
+
+- rule: Répondre à une question sur la météo en français
+  steps:
+  - intent: demander_meteo
+  - action: utter_meteo_fr
