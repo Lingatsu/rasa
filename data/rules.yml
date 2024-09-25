@@ -12,6 +12,18 @@ rules:
   - intent: bot_challenge
   - action: utter_iamabot
 
+- rule: Ask for booking details in English
+  steps:
+    - intent: book_hotel
+    - action: utter_ask_date_en
+
+- rule: Ask for location after date in English
+  steps:
+    - intent: inform_date
+    - action: utter_ask_location_en
+
+# French rules
+
 - rule: Dire au revoir en français lorsque l'utilisateur dit au revoir
   steps:
   - intent: au_revoir
@@ -26,3 +38,13 @@ rules:
   steps:
   - intent: demander_meteo
   - action: utter_meteo_fr
+
+- rule: Demander les détails de réservation en français
+  steps:
+    - intent: reserver_hotel
+    - action: utter_ask_date_fr
+
+- rule: Demander le lieu après la date en français
+  steps:
+    - intent: informer_date
+    - action: utter_ask_location_fr

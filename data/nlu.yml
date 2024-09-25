@@ -1,5 +1,7 @@
 version: "3.1"
 
+# INTENTS EN ANGLAIS
+
 nlu:
 - intent: greet
   examples: |
@@ -90,6 +92,28 @@ nlu:
     - am I talking to a bot?
     - am I talking to a human?
 
+- intent: book_hotel
+  examples: |
+    - I want to book a hotel
+    - I would like to book a hotel
+    - Book a hotel
+    - I need a hotel reservation
+    - Reserve a room
+
+- intent: inform_date
+  examples: |
+    - On January 12th
+    - For tomorrow
+    - Next week
+
+- intent: inform_location
+  examples: |
+    - in Paris
+    - in New York
+    - in London    
+
+# INTENTS EN FRANCAIS
+
 - intent: saluer
   examples: |
     - salut
@@ -155,3 +179,24 @@ nlu:
     - Quel temps fait-il ?
     - Peux-tu me donner la météo ?
     - Comment est le temps aujourd'hui ?
+
+- intent: reserver_hotel
+  examples: |
+    - Je veux réserver un hôtel
+    - J'aimerais réserver un hôtel
+    - Réserver un hôtel
+    - J'ai besoin d'une réservation d'hôtel
+    - Réserver une chambre
+    - Faire une réservation d'hôtel
+
+- intent: informer_date
+  examples: |
+    - Le 12 janvier
+    - Pour demain
+    - La semaine prochaine
+
+- intent: informer_lieu
+  examples: |
+    - à Paris
+    - à Marseille
+    - à Saint-Malo  
