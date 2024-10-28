@@ -1,202 +1,87 @@
 version: "3.1"
-
-# INTENTS EN ANGLAIS
-
 nlu:
-- intent: greet
-  examples: |
-    - hey
-    - hello
-    - hi
-    - hello there
-    - good morning
-    - good evening
-    - moin
-    - hey there
-    - let's go
-    - hey dude
-    - goodmorning
-    - goodevening
-    - good afternoon
+  - intent: greet
+    examples: |
+      - hello
+      - hi
+      - hey there
+      - greetings
 
-- intent: goodbye
-  examples: |
-    - cu
-    - good by
-    - cee you later
-    - good night
-    - bye
-    - goodbye
-    - have a nice day
-    - see you around
-    - bye bye
-    - see you later
+  - intent: goodbye
+    examples: |
+      - bye
+      - goodbye
+      - see you later
+      - have a nice day
 
-- intent: affirm
-  examples: |
-    - yes
-    - y
-    - indeed
-    - of course
-    - that sounds good
-    - correct
+  - intent: affirm
+    examples: |
+      - yes
+      - indeed
+      - correct
+      - absolutely
 
-- intent: deny
-  examples: |
-    - no
-    - n
-    - never
-    - I don't think so
-    - don't like that
-    - no way
-    - not really
+  - intent: deny
+    examples: |
+      - no
+      - not really
+      - I don't think so
 
-- intent: mood_great
-  examples: |
-    - perfect
-    - great
-    - amazing
-    - feeling like a king
-    - wonderful
-    - I am feeling very good
-    - I am great
-    - I am amazing
-    - I am going to save the world
-    - super stoked
-    - extremely good
-    - so so perfect
-    - so good
-    - so perfect
+  - intent: book_table
+    examples: |
+      - I want to book a table
+      - Book a table for me
+      - Reserve a table
 
-- intent: mood_unhappy
-  examples: |
-    - my day was horrible
-    - I am sad
-    - I don't feel very well
-    - I am disappointed
-    - super sad
-    - I'm so sad
-    - sad
-    - very sad
-    - unhappy
-    - not good
-    - not very good
-    - extremly sad
-    - so saad
-    - so sad
+  - intent: provide_date
+    examples: |
+      - for tomorrow
+      - on Friday
+      - January 12th
 
-- intent: bot_challenge
-  examples: |
-    - are you a bot?
-    - are you a human?
-    - am I talking to a bot?
-    - am I talking to a human?
+  - intent: provide_people
+    examples: |
+      - for two people
+      - for four
+      - just me
 
-- intent: book_hotel
-  examples: |
-    - I want to book a hotel
-    - I would like to book a hotel
-    - Book a hotel
-    - I need a hotel reservation
-    - Reserve a room
+  - intent: provide_name
+    examples: |
+      - My name is John
+      - for Sarah
+      - under Mike
 
-- intent: inform_date
-  examples: |
-    - On January 12th
-    - For tomorrow
-    - Next week
+  - intent: provide_phone
+    examples: |
+      - My phone number is 123456789
+      - reach me at 987654321
+      - 345678123
 
-- intent: inform_location
-  examples: |
-    - in Paris
-    - in New York
-    - in London    
+  - intent: cancel_reservation
+    examples: |
+      - I want to cancel my reservation
+      - cancel the booking
+      - remove my reservation
 
-# INTENTS EN FRANCAIS
+  - intent: get_reservation_info
+    examples: |
+      - What is my reservation information?
+      - Show my booking details
 
-- intent: saluer
-  examples: |
-    - salut
-    - bonjour
-    - coucou
-    - bonsoir
-    - hello
-    - salut ça va ?
-    - bon matin
-    - bonne après-midi
+  - intent: modify_comment
+    examples: |
+      - I want to add a comment to my reservation
+      - add a note to my booking
+      - modify the reservation comment
 
-- intent: au_revoir
-  examples: |
-    - au revoir
-    - à bientôt
-    - salut
-    - à la prochaine
-    - bye
-    - adieu
+  - intent: get_menu
+    examples: |
+      - What is the menu today?
+      - show me the menu
+      - What are the options?
 
-- intent: affirmer
-  examples: |
-    - oui
-    - bien sûr
-    - exactement
-    - correct
-    - c'est ça
-    - tout à fait
-
-- intent: nier
-  examples: |
-    - non
-    - pas du tout
-    - jamais
-    - je ne pense pas
-    - pas vraiment
-
-- intent: humeur_bonne
-  examples: |
-    - je me sens bien
-    - je suis heureux
-    - c'est une super journée
-    - je vais très bien
-    - je suis content
-
-- intent: humeur_mauvaise
-  examples: |
-    - je suis triste
-    - je ne vais pas bien
-    - je suis déçu
-    - je suis en colère
-    - mauvaise journée
-
-- intent: defi_bot
-  examples: |
-    - es-tu un robot?
-    - suis-je en train de parler à un bot?
-    - es-tu humain?
-
-- intent: demander_meteo
-  examples: |
-    - Quelle est la météo ?
-    - Quel temps fait-il ?
-    - Peux-tu me donner la météo ?
-    - Comment est le temps aujourd'hui ?
-
-- intent: reserver_hotel
-  examples: |
-    - Je veux réserver un hôtel
-    - J'aimerais réserver un hôtel
-    - Réserver un hôtel
-    - J'ai besoin d'une réservation d'hôtel
-    - Réserver une chambre
-    - Faire une réservation d'hôtel
-
-- intent: informer_date
-  examples: |
-    - 16/01
-    - Demain
-    - Semaine prochaine
-
-- intent: informer_lieu
-  examples: |
-    - Paris
-    - Marseille
-    - Saint-Malo  
+  - intent: get_allergens
+    examples: |
+      - Do you have a list of allergens?
+      - Show allergens
+      - Any allergen information?

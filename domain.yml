@@ -1,32 +1,25 @@
 version: "3.1"
-
 intents:
   - greet
   - goodbye
   - affirm
   - deny
-  - mood_great
-  - mood_unhappy
-  - bot_challenge
-  - ask_weather
-  - book_hotel
-  - inform_date
-  - inform_location
-  - saluer
-  - au_revoir
-  - affirmer
-  - nier
-  - humeur_bonne
-  - humeur_mauvaise
-  - defi_bot
-  - demander_meteo
-  - reserver_hotel
-  - informer_date
-  - informer_lieu
+  - book_table
+  - provide_date
+  - provide_people
+  - provide_name
+  - provide_phone
+  - cancel_reservation
+  - get_reservation_info
+  - modify_comment
+  - get_menu
+  - get_allergens
 
 entities:
   - date
-  - location
+  - people
+  - name
+  - phone
 
 slots:
   date:
@@ -34,80 +27,66 @@ slots:
     mappings:
       - type: from_entity
         entity: date
-  location:
+  people:
     type: text
     mappings:
       - type: from_entity
-        entity: location
+        entity: people
+  name:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: name
+  phone:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: phone
 
 responses:
   utter_greet:
-    - text: "Hello! How can I assist you?"
+    - text: "Hello! How can I help you with your reservation?"
 
   utter_goodbye:
     - text: "Goodbye!"
 
   utter_iamabot:
-    - text: "I am a bot, powered by Rasa."
+    - text: "I'm a bot here to assist you with reservations."
 
-  utter_happy:
-    - text: "Great, keep it up!"
+  utter_ask_date:
+    - text: "On which date would you like the reservation?"
 
-  utter_cheer_up:
-    - text: "Here is something to cheer you up!"
-      image: "https://i.imgur.com/nGF1K8f.jpg"
+  utter_ask_people:
+    - text: "How many people will be dining?"
 
-  utter_did_that_help:
-    - text: "Did that help?"
+  utter_ask_name:
+    - text: "Whose name should the reservation be under?"
 
-  utter_ask_weather:
-    - text: "The weather today is sunny with a temperature of 25°C."
+  utter_ask_phone:
+    - text: "Can I have a contact number?"
 
-  utter_ask_date_en:
-    - text: "Which date would you like to book the hotel?"
+  utter_confirm_reservation:
+    - text: "Your reservation is available. Shall I proceed?"
 
-  utter_ask_location_en:
-    - text: "In which city would you like to book?"
+  utter_reservation_complete:
+    - text: "Your table is booked! Thank you."
 
-  utter_confirm_booking_en:
-    - text: "Just to confirm, you want to book a hotel for {date} in {location}, is that correct?"
+  utter_cancellation_complete:
+    - text: "Your reservation has been canceled."
 
-  utter_booking_complete_en:
-    - text: "Your booking is confirmed for {date} in {location}."
+  utter_comment_updated:
+    - text: "Your comment has been added to the reservation."
 
-  # French responses
-  utter_saluer:
-    - text: "Salut ! Comment ça va ?"
+  action_get_menu:
+    - text: "Today's menu includes a variety of fresh options. Visit [menu link]."
 
-  utter_au_revoir:
-    - text: "Au revoir et à bientôt !"
-
-  utter_heureux:
-    - text: "Génial, continue comme ça !"
-
-  utter_remonter_le_moral:
-    - text: "Je suis sûr que ça ira mieux bientôt."
-
-  utter_aide:
-    - text: "Est-ce que cela vous a aidé ?"
-
-  utter_je_suis_un_bot:
-    - text: "Je suis un bot, propulsé par Rasa."
-
-  utter_meteo_fr:
-    - text: "La météo aujourd'hui est ensoleillée avec une température de 22°C."
-
-  utter_ask_date_fr:
-    - text: "Pour quelle date souhaitez-vous réserver l'hôtel ?"
-
-  utter_ask_location_fr:
-    - text: "Dans quelle ville souhaitez-vous réserver ?"
-
-  utter_confirm_booking_fr:
-    - text: "Je résume, vous voulez réserver un hôtel pour le {date} à {location}, c'est bien ça ?"
-
-  utter_booking_complete_fr:
-    - text: "Votre réservation est confirmée pour le {date} à {location}."
-
+  action_get_allergens:
+    - text: "We offer an allergen list on request. Please ask your server."
+    
 actions:
-  - action_confirm_booking
+  - check_availability
+  - action_get_menu
+  - action_get_allergens
+  - action_get_reservation_info
+  - action_modify_comment
+  - action_cancel_reservation

@@ -1,81 +1,43 @@
 version: "3.1"
-
 stories:
+  - story: happy path for booking
+    steps:
+      - intent: greet
+      - action: utter_greet
+      - intent: book_table
+      - action: utter_ask_date
+      - intent: provide_date
+      - action: utter_ask_people
+      - intent: provide_people
+      - action: utter_ask_name
+      - intent: provide_name
+      - action: utter_ask_phone
+      - intent: provide_phone
+      - action: check_availability
+      - action: utter_confirm_reservation
+      - intent: affirm
+      - action: utter_reservation_complete
 
-- story: happy path
-  steps:
-  - intent: greet
-  - action: utter_greet
-  - intent: mood_great
-  - action: utter_happy
+  - story: cancellation path
+    steps:
+      - intent: cancel_reservation
+      - action: action_cancel_reservation
+      - action: utter_cancellation_complete
 
-- story: sad path 1
-  steps:
-  - intent: greet
-  - action: utter_greet
-  - intent: mood_unhappy
-  - action: utter_cheer_up
-  - action: utter_did_that_help
-  - intent: affirm
-  - action: utter_happy
+  - story: retrieve reservation info
+    steps:
+      - intent: get_reservation_info
+      - action: action_get_reservation_info
 
-- story: sad path 2
-  steps:
-  - intent: greet
-  - action: utter_greet
-  - intent: mood_unhappy
-  - action: utter_cheer_up
-  - action: utter_did_that_help
-  - intent: deny
-  - action: utter_goodbye
+  - story: modify reservation comment
+    steps:
+      - intent: modify_comment
+      - action: action_modify_comment
+      - action: utter_comment_updated
 
-- story: hotel booking
-  steps:
-    - intent: book_hotel
-    - action: utter_ask_date_en
-    - intent: inform_date
-      entities:
-        - date: "16/01"
-    - action: utter_ask_location_en
-    - intent: inform_location
-      entities:
-        - location: "Paris"
-    - action: utter_confirm_booking_en
-    - intent: affirm
-    - action: utter_booking_complete_en
-
-# French stories
-- story: chemin heureux en français
-  steps:
-  - intent: saluer
-  - action: utter_saluer
-  - intent: humeur_bonne
-  - action: utter_heureux
-
-- story: chemin triste en français
-  steps:
-  - intent: saluer
-  - action: utter_saluer
-  - intent: humeur_mauvaise
-  - action: utter_remonter_le_moral
-  - action: utter_aide
-
-- story: demande de météo en français
-  steps:
-  - intent: demander_meteo
-  - action: utter_meteo_fr
-
-- story: réservation d'hôtel
-  steps:
-    - intent: reserver_hotel
-    - action: utter_ask_date_fr
-    - intent: informer_date
-      entities:
-        - date: "16/01"
-    - action: utter_ask_location_fr
-    - intent: informer_lieu
-      entities:
-        - location: "Paris"
-    - action: action_confirm_booking
-    - intent: affirm
-    - action: utter_booking_complete_fr
+  - story: get menu and allergens
+    steps:
+      - intent: get_menu
+      - action: action_get_menu
+      - intent: get_allergens
+      - action: action_get_allergens

@@ -1,55 +1,41 @@
 version: "3.1"
-
 rules:
+  - rule: Say goodbye
+    steps:
+      - intent: goodbye
+      - action: utter_goodbye
 
-- rule: Say goodbye anytime the user says goodbye
-  steps:
-  - intent: goodbye
-  - action: utter_goodbye
+  - rule: Say 'I am a bot' when user asks
+    steps:
+      - intent: bot_challenge
+      - action: utter_iamabot
 
-- rule: Say 'I am a bot' anytime the user challenges
-  steps:
-  - intent: bot_challenge
-  - action: utter_iamabot
+  - rule: Book a table by asking date
+    steps:
+      - intent: book_table
+      - action: utter_ask_date
 
-- rule: Ask for booking details in English
-  steps:
-    - intent: book_hotel
-    - action: utter_ask_date_en
+  - rule: Ask for number of people after date
+    steps:
+      - intent: provide_date
+      - action: utter_ask_people
 
-- rule: Ask for location after date in English
-  steps:
-    - intent: inform_date
-    - action: utter_ask_location_en
+  - rule: Ask for name after number of people
+    steps:
+      - intent: provide_people
+      - action: utter_ask_name
 
-# French rules
+  - rule: Ask for phone after name
+    steps:
+      - intent: provide_name
+      - action: utter_ask_phone
 
-- rule: Dire au revoir en français lorsque l'utilisateur dit au revoir
-  steps:
-  - intent: au_revoir
-  - action: utter_au_revoir
+  - rule: Provide menu link
+    steps:
+      - intent: get_menu
+      - action: action_get_menu
 
-- rule: Dire 'Je suis un bot' lorsque l'utilisateur le demande en français
-  steps:
-  - intent: defi_bot
-  - action: utter_je_suis_un_bot
-
-- rule: Répondre à une question sur la météo en français
-  steps:
-  - intent: demander_meteo
-  - action: utter_meteo_fr
-
-- rule: Demander les détails de réservation en français
-  steps:
-    - intent: reserver_hotel
-    - action: utter_ask_date_fr
-
-- rule: Demander le lieu après la date en français
-  steps:
-    - intent: informer_date
-    - action: utter_ask_location_fr
-
-- rule: Confirm booking in French
-  steps:
-    - intent: informer_lieu
-    - action: action_confirm_booking
+  - rule: Provide allergens
+    steps:
+      - intent: get_allergens
+      - action: action_get_allergens
