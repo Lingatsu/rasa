@@ -14,11 +14,9 @@ Ce projet consiste à créer un bot capable de gérer les réservations pour un 
 
 - **Obtenir un numéro de réservation** : Génère et fournit un numéro de réservation unique.
 
-- **Ajouter un commentaire à la réservation** : Permet d'ajouter des commentaires spécifiques à une réservation.
-
 - **Annuler une réservation** : Permet d'annuler une réservation existante.
 
-- **Afficher les informations de réservation et modifier le commentaire** : Affiche les détails d'une réservation et permet de modifier le commentaire associé.
+- **Afficher les informations de réservation ** : Affiche les détails d'une réservation.
 
 - **Obtenir le menu du jour** : Fournit le menu du jour du restaurant.
 
