@@ -1,4 +1,5 @@
-# Exercice 4 Restaurant Reservation Bot | Barbin Kévin EISI1 EPSI
+# Exercice 4 Restaurant Reservation Bot 
+## Barbin Kévin EISI1 EPSI
 
 Ce projet consiste à créer un bot capable de gérer les réservations pour un restaurant. Voici les fonctionnalités principales du bot :
 
