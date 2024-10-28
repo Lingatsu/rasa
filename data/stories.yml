@@ -35,11 +35,11 @@ stories:
     - action: utter_ask_date_en
     - intent: inform_date
       entities:
-        - date: "January 12th"
+        - date: "16/01"
     - action: utter_ask_location_en
     - intent: inform_location
       entities:
-        - location: "New York"
+        - location: "Paris"
     - action: utter_confirm_booking_en
     - intent: affirm
     - action: utter_booking_complete_en
@@ -71,11 +71,11 @@ stories:
     - action: utter_ask_date_fr
     - intent: informer_date
       entities:
-        - date: "Le 12 janvier"
+        - date: "16/01"
     - action: utter_ask_location_fr
     - intent: informer_lieu
       entities:
         - location: "Paris"
-    - action: utter_confirm_booking_fr
+    - action: action_confirm_booking
     - intent: affirm
     - action: utter_booking_complete_fr

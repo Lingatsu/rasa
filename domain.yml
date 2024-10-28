@@ -108,3 +108,6 @@ responses:
 
   utter_booking_complete_fr:
     - text: "Votre réservation est confirmée pour le {date} à {location}."
+
+actions:
+  - action_confirm_booking

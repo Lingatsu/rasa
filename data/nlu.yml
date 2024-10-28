@@ -191,12 +191,12 @@ nlu:
 
 - intent: informer_date
   examples: |
-    - Le 12 janvier
-    - Pour demain
-    - La semaine prochaine
+    - 16/01
+    - Demain
+    - Semaine prochaine
 
 - intent: informer_lieu
   examples: |
-    - à Paris
-    - à Marseille
-    - à Saint-Malo  
+    - Paris
+    - Marseille
+    - Saint-Malo  

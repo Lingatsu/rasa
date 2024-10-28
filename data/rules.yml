@@ -48,3 +48,8 @@ rules:
   steps:
     - intent: informer_date
     - action: utter_ask_location_fr
+
+- rule: Confirm booking in French
+  steps:
+    - intent: informer_lieu
+    - action: action_confirm_booking
